@@ -111,7 +111,7 @@ class Frames:
 
 
     def displayImage(self):
-        imgTk = self.image.resize((250, 250), Image.ANTIALIAS)
+        imgTk = self.image.resize((250, 250), Image.LANCZOS)
         imgTk = ImageTk.PhotoImage(image=imgTk)
         self.image = imgTk
         self.labelImg = tkinter.Label(self.winFrame, image=self.image)
