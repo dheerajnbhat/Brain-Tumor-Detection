@@ -8,7 +8,7 @@ from predictTumor import *
 
 
 class Gui:
-    MainWindow = 0
+    MainWindow = 0 
     listOfWinFrame = list()
     FirstFrame = object()
     val = 0
@@ -61,6 +61,7 @@ class Gui:
         image = Image.open(self.fileName)
         imageName = str(self.fileName)
         mriImage = cv.imread(imageName, 1)
+        print(mriImage)
         self.listOfWinFrame[0].readImage(image)
         self.listOfWinFrame[0].displayImage()
         self.DT.readImage(image)
